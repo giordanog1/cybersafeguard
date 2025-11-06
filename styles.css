@@ -1,182 +1,131 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9fafb;
-    color: #2c3e50;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Header */
-header {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 4px solid #1abc9c;
-}
-
-header h1 {
-    font-size: 2.75rem;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-}
-
-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-/* Navigation */
-nav {
-    background-color: #34495e;
-    padding: 12px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 18px;
-}
-
-nav ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 1.05rem;
-    font-weight: 500;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding-bottom: 4px;
-}
-
-nav ul li a:hover {
-    color: #1abc9c;
-    border-bottom: 2px solid #1abc9c;
-}
-
-/* Main Content */
-main {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-section {
-    margin-bottom: 60px;
-}
-
-section h2 {
-    font-size: 2.2rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    border-left: 6px solid #1abc9c;
-    padding-left: 12px;
-}
-
-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-/* Cards for Modules */
-.module-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-
-.card {
-    background-color: #fff;
-    border: none;
-    border-radius: 12px;
-    padding: 25px;
-    flex: 1 1 calc(33.333% - 25px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
-
-.card h3 {
-    font-size: 1.6rem;
-    color: #2c3e50;
-    margin-bottom: 12px;
-}
-
-.card p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 18px;
-}
-
-.card a {
-    display: inline-block;
-    padding: 10px 22px;
-    background-color: #1abc9c;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.card a:hover {
-    background-color: #16a085;
-    transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-    background-color: #2c3e50;
-    color: #fff;
-    text-align: center;
-    padding: 25px 20px;
-    margin-top: 60px;
-    border-top: 4px solid #1abc9c;
-}
-
-footer p {
-    font-size: 0.95rem;
-    opacity: 0.85;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .card {
-        flex: 1 1 calc(50% - 25px);
+    body {
+      font-family: 'Courier New';
+      margin: 0;
+      color: rgb(255, 255, 255);
+      background:#000014;
     }
+   header {
+  position: fixed;        /* keeps it locked to the viewport */
+  top: 0;                 /* stick to the very top */
+  left: 0;
+  width: 100%;            /* span full width */
+  background: #010110;
+  color: #0bdcd1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;              /* space between title and button */
+  justify-content: flex-start; /* keep everything on the left */
+  z-index: 1000;          /* ensures it sits above other content */
 }
 
-@media (max-width: 768px) {
-    .module-cards {
-        flex-direction: column;
-    }
 
-    .card {
-        flex: 1 1 100%;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(
+      to left,
+      #0bdcd1,
+      transparent
+      );
 }
+
+
+    nav .header-btn {
+      text-decoration: none;
+      padding: 8px 15px;
+      border: none;                 
+      border-bottom: 2px solid #0bdcd1;
+      color: #fff;
+      background: #01021a;
+      transition: 0.3s;
+   }
+
+   nav .header-btn:hover {
+     background: #0bdcd1;
+     color: #01021a;
+   }
+
+.hero {
+  position: relative;
+  background: url("background.jpg") center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-logo {
+  display: block;              /* allows margin auto */
+  margin: 0 auto 20px;         /* centers horizontally */
+  height: 100px;               /* base size */
+  position: relative;
+  transform: scale(2.5);         /* enlarge */
+  transform-origin: center;    /* grow from the middle */
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 30, 0.7); /* dark blue overlay at 70% opacity */
+  z-index: 1;
+}
+
+.hero h2,
+.hero p {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 10px;
+}
+
+
+    .modules {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .module-card {
+      background:#010110;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .module-card:hover {
+      transform: translateY(-5px);
+    }
+    .module-card h3 {
+      margin-top: 0;
+      color: white;
+    }
+    .module-card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .module-card button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      border: 1px solid #0bdcd1;
+      border-radius: 5px; 
+      background:#01021a;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .module-card button:hover {
+      background: #0a66c2;
+    }
+    footer {
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      background: #010110;
+      margin-top: 40px;
+    }
