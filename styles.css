@@ -109,23 +109,37 @@
       font-size: 0.95rem;
       line-height: 1.4;
     }
-    .module-card button {
-      margin-top: 15px;
-      padding: 10px 15px;
-      border: 1px solid #0bdcd1;
-      border-radius: 5px; 
-      background:#01021a;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .module-card button:hover {
-      background: #0a66c2;
-    }
-    footer {
+  .module-card button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: 1px solid #0bdcd1;
+  border-radius: 5px;
+  background: #01021a;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;        /* align text + arrow */
+  align-items: center;
+  gap: 8px;                    /* space between text and arrow */
+  transition: background 0.3s;
+}
+
+.module-card button:hover {
+  background: #0a66c2;
+}
+
+.module-card button .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.module-card button:active .arrow {
+  transform: translateX(4px);  /* arrow slides right when clicked */
+}
+
+footer {
       color: #fff;
       text-align: center;
       padding: 15px;
       background: #010110;
       margin-top: 40px;
-    }
+}

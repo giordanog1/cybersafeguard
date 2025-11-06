@@ -43,7 +43,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.quiz button {
+.quiz-btn {
   margin-top: 15px;
   padding: 10px 15px;
   border: 1px solid #0bdcd1;
@@ -51,8 +51,22 @@ h1 {
   background: #01021a;
   color: #fff;
   cursor: pointer;
+  display: inline-flex;        /* keeps text + arrow aligned */
+  align-items: center;
+  gap: 8px;                    /* space between text and arrow */
+  transition: background 0.3s;
 }
 
-.quiz button:hover {
+.quiz-btn:hover {
   background: #0a66c2;
 }
+
+.quiz-btn .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease; /* smooth movement */
+}
+
+.quiz-btn:active .arrow {
+  transform: translateX(4px);  /* arrow slides right on click */
+}
+
