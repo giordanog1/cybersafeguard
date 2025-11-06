@@ -2,26 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CyberSecure Academy</title>
+  <title>Module 1: Cybersecurity Fundamentals</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="module1.css"> <!-- overrides -->
 </head>
 <body>
-  <header>
-    
-    <nav>
-        <a href="index.html" class="header-btn">Home</a>
-        <a href="about.html" class="header-btn">About</a>
-    </nav>
 
+  <header>
+    <nav>
+      <a href="index.html" class="header-btn">Home</a>
+      <a href="about.html" class="header-btn">About</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <img src="logo.png" alt="CyberSafeGuard Academy Logo" class="hero-logo">
-  </section>
+  <main class="lesson">
+    <h1>Module 1: Cybersecurity Fundamentals 🔒 </h1>
+    <p>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks...</p>
+
+     <h2>What is Cybersecurity?</h2>
+    <p>
+      Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks.
+      These attacks often aim to access, change, or destroy sensitive information, extort money, or disrupt
+      normal business processes. Strong cybersecurity ensures trust in digital systems and protects both
+      individuals and organizations.
+    </p>
+
+    <h2>The CIA Triad</h2>
+    <p>
+      At the heart of cybersecurity are three core principles, known as the CIA Triad:
+    </p>
+    <ul>
+      <li><strong>Confidentiality</strong> – Ensuring information is accessible only to those authorized to see it.</li>
+      <li><strong>Integrity</strong> – Protecting data from being altered or tampered with.</li>
+      <li><strong>Availability</strong> – Making sure systems and data are available when needed.</li>
+    </ul>
+
+    <h2>Common Cyber Threats</h2>
+    <p>
+      Cybersecurity professionals defend against a wide range of threats, including:
+    </p>
+    <ul>
+      <li><strong>Malware</strong> – Viruses, worms, and ransomware that damage or steal data.</li>
+      <li><strong>Phishing</strong> – Fake emails or websites designed to trick users into revealing information.</li>
+      <li><strong>Social Engineering</strong> – Manipulating people into giving up confidential data.</li>
+      <li><strong>Network Attacks</strong> – Attempts to intercept or disrupt communication between systems.</li>
+    </ul>
+
+    <h2>Basic Defense Strategies</h2>
+    <p>
+      Protecting against these threats requires a layered approach:
+    </p>
+    <ul>
+      <li>Use strong, unique passwords and enable multi‑factor authentication.</li>
+      <li>Keep software and systems updated to patch vulnerabilities.</li>
+      <li>Install firewalls and antivirus tools to block malicious activity.</li>
+      <li>Back up important data regularly to prepare for emergencies.</li>
+    </ul>
+
+
+    <section class="quiz">
+      <h2>Quick Quiz</h2>
+      <form id="quiz-form">
+        <div class="question">
+          <p>1. What is the primary goal of cybersecurity?</p>
+          <label><input type="radio" name="q1" value="b"> Protect systems and data from digital attacks</label><br>
+          <label><input type="radio" name="q1" value="a"> Create new software</label><br>
+        </div>
+        <button type="submit">Submit Quiz</button>
+      </form>
+      <div id="quiz-result"></div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 CyberSafeGuard | Empowering the next generation of cyber professionals</p>
+    <p>&copy; 2025 CyberSafeGuard Academy</p>
   </footer>
+
+  <script>
+    document.getElementById('quiz-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let score = 0;
+      if (document.querySelector('input[name="q1"]:checked')?.value === 'b') score++;
+      document.getElementById('quiz-result').textContent =
+        "You scored " + score + " out of 1.";
+    });
+  </script>
 
 </body>
 </html>

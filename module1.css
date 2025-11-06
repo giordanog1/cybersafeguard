@@ -1,0 +1,58 @@
+/* Module 1 specific styles */
+h1 {
+  font-size: 2rem;   /* adjust size as needed */
+  font-weight: normal; /* removes the bold */
+  color: #0bdcd1;
+}
+
+.lesson {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  position: relative;
+
+  /* background image */
+  background: url("module1card.jpg") center/cover no-repeat;
+
+  /* dark overlay for opacity */
+  background-blend-mode: multiply; /* blends image with color */
+  background-color: rgba(0, 0, 30, 0.7); /* semi-transparent dark overlay */
+}
+
+
+.lesson h2 {
+  color: #0bdcd1;
+  font-size: 1.5rem;   /* adjust size as needed */
+  font-weight: normal; /* removes the bold */
+}
+
+.quiz {
+  margin-top: 40px;
+  padding: 20px;
+  background: #010110;
+  border-radius: 8px;
+}
+
+.quiz h2 {
+  color: #0bdcd1;
+}
+
+.quiz .question {
+  margin-bottom: 20px;
+}
+
+.quiz button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: 1px solid #0bdcd1;
+  border-radius: 5px;
+  background: #01021a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.quiz button:hover {
+  background: #0a66c2;
+}
