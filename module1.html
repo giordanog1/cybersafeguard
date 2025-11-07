@@ -17,6 +17,17 @@
   </header>
 
   <main class="lesson">
+      <!-- Page 1: Video -->
+  <section id="video-section">
+    <h2>Watch this quick intro</h2>
+    <video width="640" controls>
+      <source src="videos/CIA.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button id="to-text">Next →</button>
+  </section>
+
+  <section id="text-section" style="display:none;">
     <h1>Module 1: Cybersecurity Fundamentals 🔒 </h1>
     <p>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks...</p>
 
@@ -59,9 +70,13 @@
       <li>Install firewalls and antivirus tools to block malicious activity.</li>
       <li>Back up important data regularly to prepare for emergencies.</li>
     </ul>
+   <button id="to-quiz">Next →</button>
+  </section>
 
 
-  <section class="quiz">
+<!-- Page 3: Quiz -->
+<section id="quiz-section" style="display:none;">
+
   <h2>Quick Quiz</h2>
   <form id="quiz-form">
     <div class="question">
@@ -87,6 +102,21 @@
   </footer>
 
   <script>
+  const videoSection = document.getElementById('video-section');
+  const textSection = document.getElementById('text-section');
+  const quizSection = document.getElementById('quiz-section');
+
+  document.getElementById('to-text').addEventListener('click', () => {
+    videoSection.style.display = 'none';
+    textSection.style.display = 'block';
+  });
+
+  document.getElementById('to-quiz').addEventListener('click', () => {
+    textSection.style.display = 'none';
+    quizSection.style.display = 'block';
+  });
+
+
   const quizForm = document.getElementById('quiz-form');
   const submitBtn = document.getElementById('quiz-btn');
   //const resultBox = document.getElementById('quiz-result');
