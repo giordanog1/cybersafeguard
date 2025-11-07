@@ -70,3 +70,9 @@ h1 {
   transform: translateX(4px);  /* arrow slides right on click */
 }
 
+#quiz-btn.correct {
+  background: #4CAF50; /* light green */
+  color: #fff;
+}
+
+

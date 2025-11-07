@@ -60,21 +60,25 @@
     </ul>
 
 
-    <section class="quiz">
-      <h2>Quick Quiz</h2>
-      <form id="quiz-form">
-        <div class="question">
-          <p>1. What is the primary goal of cybersecurity?</p>
-          <label><input type="radio" name="q1" value="b"> Protect systems and data from digital attacks</label><br>
-          <label><input type="radio" name="q1" value="a"> Create new software</label><br>
-        </div>
-       <button class="quiz-btn">
-          Submit Quiz <span class="arrow">→</span>
-       </button>
+  <section class="quiz">
+  <h2>Quick Quiz</h2>
+  <form id="quiz-form">
+    <div class="question">
+      <p>1. What is the primary goal of cybersecurity?</p>
+      <label><input type="radio" name="q1" value="a"> To create new software</label><br>
+      <label><input type="radio" name="q1" value="b"> To protect systems and data from digital attacks</label><br>
+      <label><input type="radio" name="q1" value="c"> To monitor user behavior</label><br>
+      <label><input type="radio" name="q1" value="d"> To improve internet speed</label>
+    </div>
 
-      </form>
-      <div id="quiz-result"></div>
-    </section>
+    <button type="submit" id="quiz-btn" class="quiz-btn">Submit Quiz<span class="arrow">→</span></button>
+  </form>
+  <div id="quiz-result"></div>
+  <audio id="correct-sound" src="sounds/Correct Sound.mp3" preload="auto"></audio>
+
+</section>
+
+
   </main>
 
   <footer>
@@ -82,14 +86,32 @@
   </footer>
 
   <script>
-    document.getElementById('quiz-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      let score = 0;
-      if (document.querySelector('input[name="q1"]:checked')?.value === 'b') score++;
-      document.getElementById('quiz-result').textContent =
-        "You scored " + score + " out of 1.";
-    });
-  </script>
+  const quizForm = document.getElementById('quiz-form');
+  const submitBtn = document.getElementById('quiz-btn');
+  //const resultBox = document.getElementById('quiz-result');
+  const correctSound = document.getElementById('correct-sound');
+  correctSound.volume = 0.5; 
+
+  quizForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let score = 0;
+    const answer1 = document.querySelector('input[name="q1"]:checked')?.value;
+
+    if (answer1 === 'b') {
+      score++;
+      // Change button style + text
+      submitBtn.classList.add('correct');
+      submitBtn.textContent = "Correct Answer ✓";
+
+      // Play sound
+      correctSound.currentTime = 0; // reset to start
+      correctSound.play();
+    }
+
+    //resultBox.textContent = "You scored " + score + " out of 1.";
+  });
+</script>
+
 
 </body>
 </html>
