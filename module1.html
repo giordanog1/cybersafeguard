@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Module 1: Cybersecurity Fundamentals</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="module1.css"> <!-- overrides -->
+  <link rel="stylesheet" href="module1.css"> 
+  <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
 
@@ -18,16 +19,19 @@
 
   <main class="lesson">
       <!-- Page 1: Video -->
-  <section id="video-section">
-    <h2>Watch this quick intro</h2>
-    <video width="640" controls>
+  <section id="video-section" class="video-section section-card">
+  <h2>Quick Video</h2>
+  <div class="video-wrapper">
+    <video controls>
       <source src="videos/CIA.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <button id="to-text" class="quiz-btn">Next →</button>
-  </section>
+    <button id="to-text" class="next-btn">Next <span class="arrow">→</span></button>
+  </div>
+</section>
 
-  <section id="text-section" style="display:none;">
+
+  <section id="text-section" class="section-card" style="display:none;">
     <h1>Module 1: Cybersecurity Fundamentals 🔒 </h1>
     <p>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks...</p>
 
@@ -70,78 +74,31 @@
       <li>Install firewalls and antivirus tools to block malicious activity.</li>
       <li>Back up important data regularly to prepare for emergencies.</li>
     </ul>
-   <button id="to-quiz">Next →</button>
+   <button id="to-quiz" class="next-btn">Next →</button>
   </section>
 
 
 <!-- Page 3: Quiz -->
-<section id="quiz-section" style="display:none;">
-
+<section id="quiz-section" class="section-card" style="display:none;">
   <h2>Quick Quiz</h2>
-  <form id="quiz-form">
-    <div class="question">
-      <p>1. What is the primary goal of cybersecurity?</p>
-      <label><input type="radio" name="q1" value="a"> To create new software</label><br>
-      <label><input type="radio" name="q1" value="b"> To protect systems and data from digital attacks</label><br>
-      <label><input type="radio" name="q1" value="c"> To monitor user behavior</label><br>
-      <label><input type="radio" name="q1" value="d"> To improve internet speed</label>
-    </div>
-
-    <button type="submit" id="quiz-btn" class="quiz-btn">Submit Quiz<span class="arrow">→</span></button>
-  </form>
-  <div id="quiz-result"></div>
+  <div id="quiz-form"></div>
   <audio id="correct-sound" src="sounds/Correct Sound.mp3" preload="auto"></audio>
-
 </section>
 
+<!-- Toast -->
+<div id="toast" class="toast"></div> 
+
+<script src="scripts/navigation.js"></script>
+
+
+<!-- Load shared quiz logic -->
+<script src="scripts/quiz.js"></script>
 
   </main>
 
   <footer>
     <p>&copy; 2025 CyberSafeGuard Academy</p>
   </footer>
-
-  <script>
-  const videoSection = document.getElementById('video-section');
-  const textSection = document.getElementById('text-section');
-  const quizSection = document.getElementById('quiz-section');
-
-  document.getElementById('to-text').addEventListener('click', () => {
-    videoSection.style.display = 'none';
-    textSection.style.display = 'block';
-  });
-
-  document.getElementById('to-quiz').addEventListener('click', () => {
-    textSection.style.display = 'none';
-    quizSection.style.display = 'block';
-  });
-
-
-  const quizForm = document.getElementById('quiz-form');
-  const submitBtn = document.getElementById('quiz-btn');
-  //const resultBox = document.getElementById('quiz-result');
-  const correctSound = document.getElementById('correct-sound');
-  correctSound.volume = 0.5; 
-
-  quizForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    let score = 0;
-    const answer1 = document.querySelector('input[name="q1"]:checked')?.value;
-
-    if (answer1 === 'b') {
-      score++;
-      // Change button style + text
-      submitBtn.classList.add('correct');
-      submitBtn.textContent = "Correct Answer ✓";
-
-      // Play sound
-      correctSound.currentTime = 0; // reset to start
-      correctSound.play();
-    }
-
-    //resultBox.textContent = "You scored " + score + " out of 1.";
-  });
-</script>
 
 
 </body>

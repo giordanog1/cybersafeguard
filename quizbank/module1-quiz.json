@@ -1,0 +1,23 @@
+[
+  {
+    "question": "What is the primary goal of cybersecurity?",
+    "options": [
+      "To create new software",
+      "To protect systems and data from digital attacks",
+      "To monitor user behavior",
+      "To improve internet speed"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which principle of the CIA Triad ensures data is not altered?",
+    "options": [
+      "Confidentiality",
+      "Integrity",
+      "Availability",
+      "Authentication"
+    ],
+    "answer": 1
+  }
+]
+
