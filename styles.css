@@ -5,52 +5,66 @@
       color: rgb(255, 255, 255);
       background:#000014;
     }
-   header {
-  position: fixed;        /* keeps it locked to the viewport */
-  top: 0;                 /* stick to the very top */
+header {
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;            /* span full width */
+  width: 100%;
   background: #010110;
   color: #0bdcd1;
+  padding: 3px 20px;
+  border-bottom: 1px solid #0d0d3a;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
+}
+
+
+.nav-left {
   display: flex;
   align-items: center;
-  gap: 20px;              /* space between title and button */
-  justify-content: flex-start; /* keep everything on the left */
-  z-index: 1000;          /* ensures it sits above other content */
-  border-bottom: 1px solid #0d0d3a;
+  gap: 20px;
+  flex-shrink: 0; /* prevents it from shrinking or drifting */
 }
 
-
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 150px;
-      height: 2px;
-      
+.nav-right {
+  margin-right: 60px;  
+  display: flex;
+  align-items: left;
 }
 
+nav img {
+  height: 35px;
+  width: auto;
+}
 
-    nav .header-btn {
-      text-decoration: none;
-      padding: 8px 15px;
-      border: none;                 
-      border-bottom: 2px solid #0bdcd1;
-      color: #fff;
-      background: #01021a;
-      transition: 0.3s;
-   }
+/* Navigation buttons */
+nav .header-btn {
+  text-decoration: none;
+  padding: 8px 15px;
+  border: none;
+  border-bottom: 2px solid #0bdcd1;
+  color: #fff;
+  background: #01021a;
+  transition: background 0.3s, color 0.3s;
+}
 
-   nav .header-btn:hover {
-     background: #0bdcd1;
-     color: #01021a;
-   }
+nav .header-btn:hover {
+  background: #0bdcd1;
+  color: #01021a;
+}
+
 
 .hero {
+  background: url("images/background.webp") no-repeat;
+  background-size: contain;
+  background-position: 90% center; /* move slightly left from right edge */
   position: relative;
-  background: url("images/background.jpg") center/cover no-repeat;
   color: white;
   padding: 100px 20px;
   text-align: center;
@@ -74,7 +88,13 @@
   z-index: 1;
 }
 
-.hero h2,
+.hero h2
+{
+  margin-top: 40px;
+  font-size: 25px;
+  position: relative;
+  z-index: 2;
+}
 .hero p {
   position: relative;
   z-index: 2;
@@ -130,8 +150,38 @@
   transition: background 0.3s;
 }
 
+ .cta-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: 1px solid #0bdcd1;
+  border-radius: 5px;
+  background: #01021a;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;        /* align text + arrow */
+  align-items: center;
+  gap: 8px;                    /* space between text and arrow */
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  text-decoration: none; 
+   z-index: 2;
+}
+
+.cta-btn:hover {
+  background: rgba(11, 243, 231, 0.567); /* faint cyan glow */
+  color: #01021a;
+  box-shadow: 0 0 6px rgba(11, 220, 209, 0.3), 0 0 12px rgba(11, 220, 209, 0.2);
+  transform: translateY(-2px);
+}
+
+
+
+
 .module-card button:hover {
-  background: #0a66c2;
+  background: rgba(11, 243, 231, 0.567); /* faint cyan glow */
+  color: #01021a;
+  box-shadow: 0 0 6px rgba(11, 220, 209, 0.3), 0 0 12px rgba(11, 220, 209, 0.2);
+  transform: translateY(-2px);
 }
 
 .module-card button .arrow {

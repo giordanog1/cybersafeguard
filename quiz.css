@@ -41,7 +41,10 @@ h1 {
 }
 
 .quiz-btn:hover {
-  background: #0a66c2;
+  background: rgba(11, 243, 231, 0.567); /* faint cyan glow */
+  color: #01021a;
+  box-shadow: 0 0 6px rgba(11, 220, 209, 0.3), 0 0 12px rgba(11, 220, 209, 0.2);
+  transform: translateY(-2px);
 }
 
 .quiz-btn .arrow {
