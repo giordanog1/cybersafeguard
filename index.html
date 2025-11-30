@@ -6,6 +6,35 @@
   <title>CyberSafeGuard Academy</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
+<script>
+  async function loadCyberNews() {
+    try {
+      const response = await fetch(
+        "https://newsapi.org/v2/everything?q=cybersecurity&language=en&sortBy=publishedAt&pageSize=5&apiKey=3c13d03e6e634f2eb7c06516cffb09a0"
+      );
+      const data = await response.json();
+      const container = document.getElementById("news-feed");
+
+      data.articles.forEach(article => {
+        const item = document.createElement("div");
+        item.className = "news-item";
+        item.innerHTML = `
+          <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
+          <p>${article.description || ""}</p>
+          <small>Source: ${article.source.name} | ${new Date(article.publishedAt).toLocaleDateString()}</small>
+        `;
+        container.appendChild(item);
+      });
+    } catch (err) {
+      document.getElementById("news-feed").textContent = "⚠️ Unable to load news.";
+      console.error(err);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadCyberNews);
+</script>
+
 <body>
 <header>
   <nav>
@@ -60,6 +89,12 @@
       </button>
     </div>
   </div>
+</section>
+
+<!-- Cybersecurity News Feed -->
+<section id="news-section" class="section-card">
+  <h2>Latest Cybersecurity News 📰</h2>
+  <div id="news-feed"></div>
 </section>
 
 <footer>

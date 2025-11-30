@@ -240,3 +240,77 @@ footer {
   cursor: pointer;          /* ✅ still clickable */
   opacity: 0.8;
 }
+
+/* News Section Container */
+#news-section {
+  margin: 40px;
+  padding: 20px;
+  background: #06061a;                /* deep navy background */
+  border: 1px solid #0d0d3a;          /* consistent border */
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(11, 220, 209, 0.15); /* subtle cyan glow */
+}
+
+/* Section Heading */
+#news-section h2 {
+  color: #0bdcd1;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+  border-bottom: 1px solid #0d0d3a;
+  padding-bottom: 8px;
+}
+
+/* Grid for news items */
+#news-feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Individual News Card */
+.news-item {
+  background: #01021a;
+  border: 1px solid #0d0d3a;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgba(11, 220, 209, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(11, 220, 209, 0.35);
+  border-color: #0bdcd1;
+}
+
+/* News Title */
+.news-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.1em;
+}
+
+.news-item a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news-item a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* News Description */
+.news-item p {
+  margin: 6px 0;
+  color: #ccc;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+/* Source + Date */
+.news-item small {
+  color: #888;
+  font-size: 0.8em;
+}
+
