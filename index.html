@@ -10,19 +10,21 @@
 <script>
   async function loadCyberNews() {
     try {
+      // Replace with your own NewsData.io API key
       const response = await fetch(
-        "https://newsapi.org/v2/everything?q=cybersecurity&language=en&sortBy=publishedAt&pageSize=5&apiKey=3c13d03e6e634f2eb7c06516cffb09a0"
+        "https://newsdata.io/api/1/news?apikey=pub_f0c2f0d6c1af47459dbdb8f668942781&q=cybersecurity&language=en&category=technology"
       );
       const data = await response.json();
       const container = document.getElementById("news-feed");
 
-      data.articles.forEach(article => {
+      // NewsData.io returns articles in `results`
+      data.results.forEach(article => {
         const item = document.createElement("div");
         item.className = "news-item";
         item.innerHTML = `
-          <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
+          <h3><a href="${article.link}" target="_blank">${article.title}</a></h3>
           <p>${article.description || ""}</p>
-          <small>Source: ${article.source.name} | ${new Date(article.publishedAt).toLocaleDateString()}</small>
+          <small>Source: ${article.source_id || "Unknown"} | ${new Date(article.pubDate).toLocaleDateString()}</small>
         `;
         container.appendChild(item);
       });
