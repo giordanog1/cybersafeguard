@@ -1,0 +1,58 @@
+[
+  {
+    "question": "What is the primary role of a firewall in network security?",
+    "options": [
+      "To encrypt all internet traffic",
+      "To block or allow traffic based on security rules",
+      "To store user passwords securely",
+      "To speed up network connections"
+    ],
+    "answer": 1,
+    "explanation": "Firewalls act as gatekeepers, filtering traffic between trusted and untrusted networks."
+  },
+  {
+    "question": "Which of the following best describes a VPN?",
+    "options": [
+      "A secure, encrypted tunnel for internet traffic",
+      "A tool that speeds up downloads",
+      "A firewall replacement",
+      "A password manager"
+    ],
+    "answer": 0,
+    "explanation": "VPNs protect data in transit and provide privacy by encrypting connections."
+  },
+  {
+    "question": "What type of attack floods a server or network with traffic to make it unavailable?",
+    "options": [
+      "Packet Sniffing",
+      "Social Engineering",
+      "Denial of Service (DoS)",
+      "Man‑in‑the‑Middle (MitM)"
+    ],
+    "answer": 2,
+    "explanation": "DoS attacks overwhelm systems with traffic, disrupting normal operations."
+  },
+  {
+    "question": "Which of the following is an example of a Man‑in‑the‑Middle (MitM) attack?",
+    "options": [
+      "A virus spreading through a network",
+      "An attacker intercepting communication between two parties",
+      "A firewall blocking suspicious traffic",
+      "A user forgetting to update their router firmware"
+    ],
+    "answer": 1,
+    "explanation": "MitM attacks involve secretly relaying or altering communication between two systems."
+  },
+  {
+    "question": "Which best practice helps protect a network from attacks?",
+    "options": [
+      "Sharing Wi‑Fi passwords widely",
+      "Disabling encryption on public networks",
+      "Ignoring router updates",
+      "Using firewalls and VPNs together"
+    ],
+    "answer": 3,
+    "explanation": "Combining multiple defenses strengthens network security and reduces vulnerabilities."
+  }
+]
+

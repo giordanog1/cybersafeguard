@@ -1,0 +1,58 @@
+[
+  {
+    "question": "What is the main purpose of a password?",
+    "options": [
+      "To act as a digital key protecting accounts",
+      "To improve internet speed",
+      "To store personal information",
+      "To monitor user activity"
+    ],
+    "answer": 0,
+    "explanation": "Passwords prevent unauthorized access to accounts and systems."
+  },
+  {
+    "question": "Which of the following is considered a strong password?",
+    "options": [
+      "Sunset2025",
+      "123456",
+      "R!verSunset2025*",
+      "Password2025"
+    ],
+    "answer": 2,
+    "explanation": "Strong passwords are long, complex, and unpredictable."
+  },
+  {
+    "question": "What is a common mistake users make with passwords?",
+    "options": [
+      "Storing passwords in a password manager",
+      "Changing passwords after a suspected breach",
+      "Reusing the same password across multiple accounts",
+      "Using a mix of letters, numbers, and symbols"
+    ],
+    "answer": 2,
+    "explanation": "Reusing passwords increases the risk if one account is compromised."
+  },
+  {
+    "question": "Which factor is an example of 'Something you have' in multi‑factor authentication?",
+    "options": [
+      "A fingerprint",
+      "A smartphone receiving a one‑time code",
+      "A PIN number",
+      "A security question answer"
+    ],
+    "answer": 1,
+    "explanation": "“Something you have” refers to physical items like phones or tokens."
+  },
+  {
+    "question": "Why is multi‑factor authentication (MFA) important?",
+    "options": [
+      "It eliminates the need for strong passwords",
+      "It speeds up the login process",
+      "It provides an extra layer of security beyond passwords",
+      "It makes passwords easier to remember"
+    ],
+    "answer": 2,
+    "explanation": "MFA reduces the risk of unauthorized access even if a password is stolen."
+  }
+]
+

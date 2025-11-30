@@ -7,7 +7,8 @@
       "To monitor user behavior",
       "To improve internet speed"
     ],
-    "answer": 1
+    "answer": 1,
+    "explanation": "Cybersecurity’s main purpose is to defend systems and data from attacks, ensuring trust and safety."
   },
   {
     "question": "Which principle of the CIA Triad ensures data is not altered?",
@@ -17,7 +18,40 @@
       "Availability",
       "Authentication"
     ],
-    "answer": 1
+    "answer": 1,
+    "explanation": "Integrity means data remains accurate and unchanged, protecting against tampering or unauthorized modification."
+  },
+    {
+    "question": "Which of the following is an example of a phishing attack?",
+    "options": [
+      "A hacker installing ransomware on a server",
+      "A firewall blocking unauthorized traffic",
+      "An email tricking a user into clicking a fake login link",
+      "A worm spreading across a network"
+    ],
+    "answer": 2,
+    "explanation": "Phishing uses deceptive emails or websites to trick users into revealing sensitive information."
+  },
+  {
+    "question": "What does “Availability” in the CIA Triad refer to?",
+    "options": [
+      "Ensuring data is encrypted during transmission",
+      "Making sure systems and data are accessible when needed",
+      "Preventing unauthorized users from accessing information",
+      "Protecting data from being altered"
+    ],
+    "answer": 1,
+    "explanation": "Availability ensures that authorized users can access systems and data reliably."
+  },
+  {
+    "question": "Which of the following best illustrates a social engineering attack?",
+    "options": [
+      "A hacker exploiting outdated software",
+      "A virus spreading through a network",
+      "An employee being tricked into revealing confidential information",
+      "A firewall blocking suspicious traffic"
+    ],
+    "answer": 2,
+    "explanation": "Social engineering manipulates people rather than technology, making human behavior the target of the attack."
   }
 ]
-

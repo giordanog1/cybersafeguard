@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 2: Passwords & Authentication</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="module2.css">  
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body data-module="module2">
+
+  <header>
+    <nav>
+      <div class="nav-left">
+        <img src="images/logo.png" alt="CyberSafeGuard Academy Logo">
+        <a href="index.html" class="header-btn">Home</a>
+        <a href="about.html" class="header-btn">About</a>
+      </div>
+      <div class="nav-right">
+        
+      </div>
+    </nav>
+  </header>
+
+  <main class="lesson">
+
+    <!-- Page 1: Video -->
+    <section id="video-section" class="video-section section-card">
+      <div class="progress-indicator">
+        <span class="circle" data-step="1"></span>
+        <span class="circle" data-step="2"></span>
+        <span class="circle" data-step="3"></span>
+      </div>
+      <h2>Quick Video</h2>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="videos/passwords.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button id="to-text" class="next-btn">Next <span class="arrow">→</span></button>
+      </div>
+    </section>
+
+
+ <!-- Page 2: Lesson -->
+  <section id="text-section" class="section-card" style="display:none;">
+    <div class="progress-indicator">
+  <span class="circle" data-step="1"></span>
+  <span class="circle" data-step="2"></span>
+  <span class="circle" data-step="3"></span>
+</div>
+  <h1>Module 2: Passwords & Authentication 🔑</h1>
+  <p>Learn how to create strong passwords and the importance of multi‑factor authentication.</p>
+
+  <h2>What Are Passwords?</h2>
+  <p>
+    Passwords are the most common way to secure accounts and systems. They act as digital keys, preventing
+    unauthorized access to sensitive information. Weak or reused passwords make it easier for attackers to break in.
+  </p>
+
+  <h2>Characteristics of Strong Passwords</h2>
+  <ul>
+    <li><strong>Length:</strong> At least 12–16 characters</li>
+    <li><strong>Complexity:</strong> Mix of uppercase, lowercase, numbers, and symbols</li>
+    <li><strong>Uniqueness:</strong> Different for every account</li>
+    <li><strong>Unpredictability:</strong> Avoid personal details like names, birthdays, or common words</li>
+  </ul>
+  <p><em>Example:</em> <code>R!verSunset2025*</code> is stronger than <code>Sunset2025</code>.</p>
+
+  <h2>Common Mistakes to Avoid</h2>
+  <ul>
+    <li>Using simple passwords like <code>123456</code> or <code>password</code></li>
+    <li>Reusing the same password across multiple accounts</li>
+    <li>Writing passwords down or sharing them with others</li>
+    <li>Ignoring password manager tools that can safely store credentials</li>
+  </ul>
+
+  <h2>Multi‑Factor Authentication (MFA)</h2>
+  <p>
+    MFA adds an extra layer of security by requiring more than just a password. Even if a password is stolen,
+    MFA makes it harder for attackers to gain access.
+  </p>
+  <p><strong>Types of MFA factors:</strong></p>
+  <ul>
+    <li><strong>Something you know</strong> — password or PIN</li>
+    <li><strong>Something you have</strong> — phone, security token, smart card</li>
+    <li><strong>Something you are</strong> — fingerprint, facial recognition</li>
+  </ul>
+  <p><em>Example:</em> Logging in with a password plus a one‑time code sent to your phone.</p>
+
+  <h2>Best Practices for Authentication</h2>
+  <ul>
+    <li>Enable MFA on all critical accounts (email, banking, work systems)</li>
+    <li>Use a password manager to generate and store unique passwords</li>
+    <li>Change passwords immediately if you suspect compromise</li>
+    <li>Regularly review account security settings</li>
+  </ul>
+
+  <h2>Key Takeaways</h2>
+  <ul>
+    <li>Strong passwords are essential for protecting accounts.</li>
+    <li>MFA significantly reduces the risk of unauthorized access.</li>
+    <li>Combining good password hygiene with MFA creates a robust defense strategy.</li>
+  </ul>
+   <button id="to-quiz" class="next-btn">Next →</button>
+  </section>
+
+
+  <!-- Page 3: Quiz -->
+    <section id="quiz-section" class="section-card" style="display:none;">
+      <div class="progress-indicator">
+        <span class="circle" data-step="1"></span>
+        <span class="circle" data-step="2"></span>
+        <span class="circle" data-step="3"></span>
+      </div>
+      <h2>Quiz</h2>
+      <div id="quiz-form"></div>
+
+      <!-- ✅ Sounds -->
+      <audio id="correct-sound" src="sounds/Correct Sound.mp3" preload="auto"></audio>
+      <audio id="completion-sound" src="sounds/celebration.mp3" preload="auto"></audio>
+    </section>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div> 
+
+    <!-- Navigation logic -->
+    <script src="scripts/navigation.js"></script>
+
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+    <!-- Shared quiz logic -->
+    <script src="scripts/quiz.js"></script>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CyberSafeGuard Academy</p>
+  </footer>
+
+</body>
+</html>

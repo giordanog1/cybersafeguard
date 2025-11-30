@@ -24,7 +24,6 @@ nav {
   padding: 10px 20px;
 }
 
-
 .nav-left {
   display: flex;
   align-items: center;
@@ -150,6 +149,32 @@ nav .header-btn:hover {
   transition: background 0.3s;
 }
 
+/* Add a green checkmark after completed module titles */
+.module-card.completed h3::after {
+  content: " ✔";
+  color: lightgreen;
+  font-size: 1.2em;
+  margin-left: 8px;
+}
+
+/* Grey out the button when completed */
+.module-card.completed .start-btn {
+  background-color: #aaa;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.score-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #222;
+  color: #0bdcd1;
+  font-weight: bold;
+  text-align: center;
+}
+
+
  .cta-btn {
   margin-top: 15px;
   padding: 10px 15px;
@@ -199,4 +224,19 @@ footer {
       padding: 15px;
       background: #010110;
       margin-top: 40px;
+}
+
+/* Checkmark after completed module titles */
+.module-card.completed h3::after {
+  content: " ✔";
+  color: lightgreen;
+  font-size: 1.2em;
+  margin-left: 8px;
+}
+
+.module-card.completed .start-btn {
+  background-color: #aaa;   /* grey look */
+  color: #fff;
+  cursor: pointer;          /* ✅ still clickable */
+  opacity: 0.8;
 }
