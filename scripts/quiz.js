@@ -162,4 +162,5 @@ function checkQuizCompletion(totalQuestions, moduleName) {
     scoreBox.textContent = `You got ${correctCount}/${totalQuestions} correct. Keep going!`;
     quizSection.appendChild(scoreBox);
   }
+  
 }

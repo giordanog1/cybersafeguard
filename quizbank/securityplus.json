@@ -1,0 +1,21 @@
+[
+  {
+    "question": "Which protocol is used to securely transfer files?",
+    "options": ["FTP", "TFTP", "SFTP", "Telnet"],
+    "answer": 2,
+    "explanation": "SFTP uses SSH to provide secure file transfers."
+  },
+  {
+    "question": "What type of attack involves tricking users into revealing information via fake emails?",
+    "options": ["Phishing", "SQL Injection", "Man-in-the-Middle", "Brute Force"],
+    "answer": 0,
+    "explanation": "Phishing attacks use fraudulent emails or websites to steal information."
+  },
+  {
+    "question": "Which encryption algorithm is symmetric?",
+    "options": ["RSA", "ECC", "AES", "Diffie-Hellman"],
+    "answer": 2,
+    "explanation": "AES is a symmetric encryption algorithm used for bulk data encryption."
+  }
+]
+

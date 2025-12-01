@@ -307,52 +307,53 @@ footer {
 
 /* News Section Container */
 #news-section {
-  margin: 40px;
-  padding: 20px;
-  background: #06061a;                /* deep navy background */
-  border: 1px solid #0d0d3a;          /* consistent border */
-  border-radius: 8px;
-  box-shadow: 0 0 12px rgba(11, 220, 209, 0.15); /* subtle cyan glow */
+  margin: 20px;                /* reduced outer spacing */
+  padding: 12px;               /* tighter padding */
+  background: #06061a;
+  border: 1px solid #0d0d3a;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(11, 220, 209, 0.12);
 }
 
 /* Section Heading */
 #news-section h2 {
   color: #0bdcd1;
-  margin-bottom: 20px;
-  font-size: 1.6em;
+  margin-bottom: 12px;         /* less spacing below heading */
+  font-size: 1.3em;             /* slightly smaller font */
   border-bottom: 1px solid #0d0d3a;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 
 /* Grid for news items */
 #news-feed {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* narrower cards */
+  gap: 12px;                   /* reduced gap between cards */
 }
 
 /* Individual News Card */
 .news-item {
   background: #01021a;
   border: 1px solid #0d0d3a;
-  border-radius: 6px;
-  padding: 15px;
-  box-shadow: 0 0 8px rgba(11, 220, 209, 0.1);
+  border-radius: 4px;
+  padding: 10px;               /* smaller padding */
+  box-shadow: 0 0 6px rgba(11, 220, 209, 0.08);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .news-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 15px rgba(11, 220, 209, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(11, 220, 209, 0.25);
   border-color: #0bdcd1;
 }
 
 /* News Title */
 .news-item h3 {
-  margin: 0 0 8px;
-  font-size: 1.1em;
+  margin: 0 0 6px;
+  font-size: 1em;              /* smaller title font */
 }
 
+/* Links */
 .news-item a {
   color: #fff;
   text-decoration: none;
@@ -366,15 +367,180 @@ footer {
 
 /* News Description */
 .news-item p {
-  margin: 6px 0;
+  margin: 4px 0;
   color: #ccc;
-  font-size: 0.95em;
-  line-height: 1.4;
+  font-size: 0.85em;           /* slightly smaller text */
+  line-height: 1.3;            /* tighter line spacing */
 }
 
 /* Source + Date */
 .news-item small {
   color: #888;
-  font-size: 0.8em;
+  font-size: 0.75em;           /* smaller metadata */
+}
+
+#quiz-section {
+  margin: 40px auto;
+  padding: 20px;
+  background: #06061a;
+  border: 1px solid #0d0d3a;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  max-width: 600px;
+}
+
+#quiz-container h2 {
+  color: #0bdcd1;
+}
+
+#question {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.option-btn {
+  display: block;
+  margin: 8px 0;
+  padding: 10px;
+  background: #0d0d3a;
+  border: 1px solid #0bdcd1;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.option-btn:hover {
+  background: #0bdcd1;
+  color: #06061a;
+}
+
+#feedback {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+#score {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #0bdcd1;
+}
+
+/* Security+ Practice Zone Container */
+#securityplus-quiz {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 900px;
+  border-radius: 10px;
+  color: #fff;
+  background: url("images/securityplus-bg.jpg") center/cover no-repeat;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 30, 0.7);
+  box-shadow: 0 0 12px rgba(11, 220, 209, 0.15);
+}
+
+/* Section Heading */
+#securityplus-quiz h2 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #0bdcd1;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid #0d0d3a;
+  padding-bottom: 8px;
+}
+
+/* Question text */
+#securityplus-container .question-text {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #0bdcd1;
+  margin-bottom: 12px;
+}
+
+/* Option buttons */
+.option-btn {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border: 1px solid #0bdcd1;
+  border-radius: 6px;
+  background: #01021a;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.option-btn:hover {
+  background: rgba(11, 243, 231, 0.567);
+  color: #01021a;
+  box-shadow: 0 0 6px rgba(11, 220, 209, 0.3),
+              0 0 12px rgba(11, 220, 209, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Feedback + Explanation */
+.feedback {
+  margin-top: 10px;
+  font-size: 0.95em;
+}
+
+.explanation {
+  margin-top: 8px;
+  font-size: 0.85em;
+  color: #ccc;
+}
+
+/* Score box */
+.score-box {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #0bdcd1;
+  text-align: center;
+}
+
+/* Completion animation */
+.score-box.complete {
+  animation: pulseGlow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from { text-shadow: 0 0 6px #0bdcd1; }
+  to   { text-shadow: 0 0 16px #0bdcd1; }
+}
+
+/* Next button */
+#securityplus-container .next-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: 1px solid #0bdcd1;
+  border-radius: 5px;
+  background: #01021a;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s;
+}
+
+#securityplus-container .next-btn:hover {
+  background: rgba(11, 243, 231, 0.567);
+  color: #01021a;
+  box-shadow: 0 0 6px rgba(11, 220, 209, 0.3),
+              0 0 12px rgba(11, 220, 209, 0.2);
+  transform: translateY(-2px);
+}
+
+#securityplus-container .next-btn .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+#securityplus-container .next-btn:active .arrow {
+  transform: translateX(4px);
 }
 
