@@ -59,6 +59,69 @@ nav .header-btn:hover {
 }
 
 
+/* Cyber Tip of the Day Banner */
+#tip-section {
+  position: fixed;
+  top: 60px;                 /* adjust to match your navbar height */
+  left: 0;
+  width: 100%;
+  background: #06061a;       /* dark neon background */
+  border-bottom: 1px solid #0d0d3a;
+  padding: 8px 20px;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(11, 220, 209, 0.2);
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Fixed label on the left */
+.tip-label {
+  color: #0bdcd1;            /* cyan neon accent */
+  font-weight: bold;
+  flex: 0 0 auto;
+}
+
+/* Viewport to clip the scrolling text */
+.tip-viewport {
+  flex: 1 1 auto;
+  overflow: hidden;          /* hides overflow for scrolling effect */
+  height: 1.2em;             /* prevents vertical jitter */
+  position: relative;
+}
+
+/* Marquee track that scrolls continuously */
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollLoop 15s linear infinite;
+}
+
+/* Text copies (two for seamless loop) */
+.tip-text {
+  display: inline-block;
+  margin-right: 50px;        /* spacing between repeats */
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95em;
+}
+
+/* Keyframes for smooth scrolling loop */
+@keyframes scrollLoop {
+  from { transform: translateX(200%); }   /* start off-screen to the right */
+  to   { transform: translateX(-100%); }  /* scroll fully off to the left */
+}
+
+
+/* Optional: pause scrolling when hovered */
+.tip-viewport:hover .marquee {
+  animation-play-state: paused;
+}
+
+
+
+
 .hero {
   background: url("images/background.webp") no-repeat;
   background-size: contain;
@@ -66,6 +129,7 @@ nav .header-btn:hover {
   position: relative;
   color: white;
   padding: 100px 20px;
+  margin-top: 60px;
   text-align: center;
 }
 

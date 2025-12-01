@@ -83,35 +83,38 @@ function handleAnswer(questionDiv, questionIndex, totalQuestions, moduleName) {
   const correctAnswer = parseInt(questionDiv.dataset.correct);
 
   if (parseInt(selected.value) === correctAnswer) {
-    // Play correct sound
-    const correctSound = document.getElementById("correct-sound");
-    if (correctSound) {
-      correctSound.volume = 0.4; // softer chime
-      correctSound.currentTime = 0;
-      correctSound.play();
-    }
-
-    feedbackBox.textContent = "";
-    const feedback = document.createElement("div");
-    feedback.textContent = "✅ Correct!";
-    feedback.style.color = "lightgreen";
-    questionDiv.querySelector(".submit-btn").replaceWith(feedback);
-
-    showToast("Correct! Great job!");
-
-    const explanation = document.createElement("div");
-    explanation.className = "explanation";
-    explanation.textContent = questionDiv.dataset.explanation;
-    explanation.style.marginTop = "10px";
-    explanation.style.color = "#ccc";
-    questionDiv.appendChild(explanation);
-
-    correctCount++;
-    checkQuizCompletion(totalQuestions, moduleName);
-  } else {
-    feedbackBox.textContent = "❌ Incorrect, try again.";
-    feedbackBox.style.color = "red";
+  // Play correct sound
+  const correctSound = document.getElementById("correct-sound");
+  if (correctSound) {
+    correctSound.currentTime = 0;
+    correctSound.play();
   }
+
+  feedbackBox.textContent = "";
+  const feedback = document.createElement("div");
+  feedback.textContent = "✅ Correct!";
+  feedback.style.color = "lightgreen";
+  questionDiv.querySelector(".submit-btn").replaceWith(feedback);
+
+  showToast("Correct! Great job!");
+
+  const explanation = document.createElement("div");
+  explanation.className = "explanation";
+  explanation.textContent = questionDiv.dataset.explanation;
+  explanation.style.marginTop = "10px";
+  explanation.style.color = "#ccc";
+  questionDiv.appendChild(explanation);
+
+  // ✅ Disable all options once correct answer is chosen
+  const options = questionDiv.querySelectorAll("input[type='radio']");
+  options.forEach(opt => opt.disabled = true);
+
+  correctCount++;
+  checkQuizCompletion(totalQuestions, moduleName);
+} else {
+  feedbackBox.textContent = "❌ Incorrect, try again.";
+  feedbackBox.style.color = "red";
+}
 }
 
 // ---------------- Completion Check ----------------
