@@ -307,8 +307,8 @@ footer {
 
 /* News Section Container */
 #news-section {
-  margin: 20px;                /* reduced outer spacing */
-  padding: 12px;               /* tighter padding */
+  margin: 20px;
+  padding: 12px;
   background: #06061a;
   border: 1px solid #0d0d3a;
   border-radius: 6px;
@@ -318,17 +318,17 @@ footer {
 /* Section Heading */
 #news-section h2 {
   color: #0bdcd1;
-  margin-bottom: 12px;         /* less spacing below heading */
-  font-size: 1.3em;             /* slightly smaller font */
+  margin-bottom: 12px;
+  font-size: 1.3em;
   border-bottom: 1px solid #0d0d3a;
   padding-bottom: 6px;
 }
 
-/* Grid for news items */
+/* Feed layout */
 #news-feed {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* narrower cards */
-  gap: 12px;                   /* reduced gap between cards */
+  display: flex;
+  flex-direction: column;   /* stack items vertically */
+  gap: 12px;
 }
 
 /* Individual News Card */
@@ -336,7 +336,7 @@ footer {
   background: #01021a;
   border: 1px solid #0d0d3a;
   border-radius: 4px;
-  padding: 10px;               /* smaller padding */
+  padding: 10px;
   box-shadow: 0 0 6px rgba(11, 220, 209, 0.08);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
@@ -349,34 +349,45 @@ footer {
 
 /* News Title */
 .news-item h3 {
-  margin: 0 0 6px;
-  font-size: 1em;              /* smaller title font */
+  margin: 0 0 6px;          /* keep spacing below title */
+  font-size: 1em;
 }
 
-/* Links */
-.news-item a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.news-item h3 a {
+  color: #0bdcd1;        /* cyan title color */
+  text-decoration: none; /* remove underline */
 }
 
-.news-item a:hover {
-  color: #fff;
-  text-decoration: underline;
+.news-item h3 a:hover {
+  color: #0bdcd1;        /* keep cyan on hover */
+  text-decoration: underline; /* optional underline on hover */
+}
+
+
+
+/* Horizontal flow for description + metadata */
+.news-body {
+  display: flex;
+  flex-direction: row;      /* side by side */
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 /* News Description */
-.news-item p {
-  margin: 4px 0;
+.news-body p {
+  margin: 0;
   color: #ccc;
-  font-size: 0.85em;           /* slightly smaller text */
-  line-height: 1.3;            /* tighter line spacing */
+  font-size: 0.85em;
+  line-height: 1.3;
+  flex: 1;                  /* take available space */
 }
 
 /* Source + Date */
-.news-item small {
+.news-body small {
   color: #888;
-  font-size: 0.75em;           /* smaller metadata */
+  font-size: 0.75em;
+  flex-shrink: 0;           /* fixed on the right */
 }
 
 #quiz-section {
