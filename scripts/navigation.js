@@ -52,12 +52,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ✅ Helper: Stop all videos when leaving a section
+  function stopVideos() {
+    document.querySelectorAll('video').forEach(v => {
+      v.pause();
+      v.currentTime = 0; // reset to start
+    });
+  }
+
   // Navigation buttons
   const toTextBtn = document.getElementById('to-text');
   const toQuizBtn = document.getElementById('to-quiz');
 
   if (toTextBtn) {
     toTextBtn.addEventListener('click', () => {
+      stopVideos(); // stop video when moving on
       videoSection.style.display = 'none';
       textSection.style.display = 'block';
       quizSection.style.display = 'none';
@@ -67,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (toQuizBtn) {
     toQuizBtn.addEventListener('click', () => {
+      stopVideos(); // stop video when moving on
       videoSection.style.display = 'none';
       textSection.style.display = 'none';
       quizSection.style.display = 'block';
@@ -78,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   circles.forEach(circle => {
     circle.addEventListener('click', () => {
       const step = parseInt(circle.dataset.step);
+      stopVideos(); // stop video whenever switching steps
       if (step === 1) {
         videoSection.style.display = 'block';
         textSection.style.display = 'none';

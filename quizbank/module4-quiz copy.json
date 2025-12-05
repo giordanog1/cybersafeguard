@@ -1,0 +1,57 @@
+[
+  {
+    "question": "What is the main goal of a phishing attack?",
+    "options": [
+      "To trick users into revealing sensitive information",
+      "To improve internet speed",
+      "To install firewalls on devices",
+      "To encrypt all network traffic"
+    ],
+    "answer": 0,
+    "explanation": "Phishing scams impersonate trusted sources to steal data like passwords or credit card numbers."
+  },
+  {
+    "question": "Which of the following is a common sign of a phishing email?",
+    "options": [
+      "Urgent requests with suspicious links or attachments",
+      "Perfect grammar and formatting",
+      "Messages only sent to IT departments",
+      "A sender address that matches the organization’s domain"
+    ],
+    "answer": 0,
+    "explanation": "Phishing emails often create urgency and include malicious links or files."
+  },
+  {
+    "question": "What is an example of social engineering?",
+    "options": [
+      "A firewall blocking unauthorized traffic",
+      "A hacker exploiting outdated software",
+      "An attacker tricking an employee into sharing login credentials",
+      "A virus spreading through a network"
+    ],
+    "answer": 2,
+    "explanation": "Social engineering manipulates people rather than technology to gain access."
+  },
+  {
+    "question": "Which of the following best describes 'baiting'?",
+    "options": [
+      "Pretending to be IT support to gain trust",
+      "Flooding a server with traffic to disrupt service",
+      "Offering free software that secretly contains malware",
+      "Intercepting communication between two parties"
+    ],
+    "answer": 2,
+    "explanation": "Baiting lures victims with something enticing, which hides malicious intent."
+  },
+  {
+    "question": "What is the best strategy to avoid falling victim to phishing?",
+    "options": [
+      "Verify suspicious emails before acting",
+      "Always click links quickly to respond faster",
+      "Share login credentials with coworkers for convenience",
+      "Disable antivirus software to reduce false alerts"
+    ],
+    "answer": 0,
+    "explanation": "Pausing to check sender details and links helps prevent phishing success."
+  }
+]

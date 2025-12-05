@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 4: Phishing & Social Engineering</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="module4.css">  
+  <link rel="stylesheet" href="../quiz.css">
+</head>
+<body data-module="module4">
+
+  <header>
+    <nav>
+      <div class="nav-left">
+        <img src="../images/logo.png" alt="CyberSafeGuard Academy Logo">
+        <a href="../index.html" class="header-btn">Home</a>
+        <a href="../about.html" class="header-btn">About</a>
+      </div>
+      <div class="nav-right">
+
+      </div>
+    </nav>
+  </header>
+
+  <main class="lesson">
+
+    <!-- Page 1: Video -->
+    <section id="video-section" class="video-section section-card">
+      <div class="progress-indicator">
+        <span class="circle" data-step="1"></span>
+        <span class="circle" data-step="2"></span>
+        <span class="circle" data-step="3"></span>
+      </div>
+      <h2>Quick Video</h2>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="../videos/Module4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button id="to-text" class="next-btn">Next <span class="arrow">→</span></button>
+      </div>
+    </section>
+
+
+ <!-- Page 2: Lesson -->
+  <section id="text-section" class="section-card" style="display:none;">
+    <div class="progress-indicator">
+  <span class="circle" data-step="1"></span>
+  <span class="circle" data-step="2"></span>
+  <span class="circle" data-step="3"></span>
+</div>
+ <h1>Module 4: Phishing & Social Engineering 🎣</h1>
+  <p>Recognize common scams and learn strategies to avoid falling victim.</p>
+
+  <h2>What Is Phishing?</h2>
+  <p>
+    Phishing is a cyber attack where criminals impersonate trusted sources (like banks, companies, or coworkers)
+    to trick people into revealing sensitive information.
+  </p>
+  <ul>
+    <li><strong>Goal:</strong> Steal usernames, passwords, credit card numbers, or other personal data.</li>
+    <li><strong>Methods:</strong> Fake emails, text messages, phone calls, or websites.</li>
+    <li><strong>Example:</strong> An email that looks like it’s from your bank asking you to “verify your account” by clicking a link.</li>
+  </ul>
+
+  <h2>What Is Social Engineering?</h2>
+  <p>
+    Social engineering manipulates human behavior rather than exploiting technical flaws. Attackers rely on trust,
+    fear, or urgency to trick people.
+  </p>
+  <ul>
+    <li><strong>Pretexting:</strong> Creating a false scenario to gain information (e.g., pretending to be IT support).</li>
+    <li><strong>Baiting:</strong> Offering something enticing (like free software) that hides malware.</li>
+    <li><strong>Tailgating:</strong> Following someone into a secure area without authorization.</li>
+    <li><strong>Example:</strong> A caller pretending to be from tech support asking for your login credentials.</li>
+  </ul>
+
+  <h2>🎭 Common Signs of Phishing & Scams</h2>
+  <ul>
+    <li>Unexpected emails or messages with urgent requests</li>
+    <li>Suspicious links or attachments</li>
+    <li>Poor grammar, spelling mistakes, or unusual formatting</li>
+    <li>Sender addresses that don’t match the organization’s domain</li>
+    <li>Offers that seem “too good to be true”</li>
+  </ul>
+
+  <h2>🛡️ Strategies to Avoid Falling Victim</h2>
+  <ul>
+    <li>Pause before clicking: Verify links and attachments.</li>
+    <li>Check the sender: Confirm email addresses and phone numbers.</li>
+    <li>Enable security tools: Use spam filters and antivirus software.</li>
+    <li>Report suspicious activity: Alert your IT/security team.</li>
+    <li>Educate yourself: Stay updated on common scams and tactics.</li>
+  </ul>
+
+  <h2>📌 Key Takeaways</h2>
+  <ul>
+    <li>Phishing and social engineering target people, not just technology.</li>
+    <li>Recognizing warning signs helps prevent scams.</li>
+    <li>Awareness, caution, and reporting are critical defenses.</li>
+  </ul>
+   <button id="to-quiz" class="next-btn">Next →</button>
+  </section>
+
+
+ <!-- Page 3: Quiz -->
+    <section id="quiz-section" class="section-card" style="display:none;">
+      <div class="progress-indicator">
+        <span class="circle" data-step="1"></span>
+        <span class="circle" data-step="2"></span>
+        <span class="circle" data-step="3"></span>
+      </div>
+      <h2>Quiz</h2>
+      <div id="quiz-form"></div>
+
+      <!-- ✅ Sounds -->
+      <audio id="correct-sound" src="../sounds/Correct Sound.mp3" preload="auto"></audio>
+      <audio id="completion-sound" src="../sounds/celebration.mp3" preload="auto"></audio>
+
+      <button id="home-btn" class="home-btn" style="display:none;">Home</button>
+    </section>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div> 
+
+    <!-- Navigation logic -->
+    <script src="../scripts/navigation.js"></script>
+
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+    <!-- Shared quiz logic -->
+    <script src="../scripts/quiz.js"></script>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CyberSafeGuard Academy</p>
+  </footer>
+
+</body>
+</html>
+

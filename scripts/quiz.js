@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const quizFile = `${moduleName}-quiz.json`;
 
   // Load quiz JSON from quizbank folder
-  fetch(`quizbank/${quizFile}`)
+  fetch(`../quizbank/${quizFile}`)
     .then(response => response.json())
     .then(questions => {
       renderQuiz(questions, quizSection, moduleName);
@@ -115,7 +115,6 @@ function handleAnswer(questionDiv, questionIndex, totalQuestions, moduleName) {
   feedbackBox.textContent = "❌ Incorrect, try again.";
   feedbackBox.style.color = "red";
 }
-}
 
 // ---------------- Completion Check ----------------
 function checkQuizCompletion(totalQuestions, moduleName) {
@@ -139,7 +138,7 @@ function checkQuizCompletion(totalQuestions, moduleName) {
         completionSound.play().catch(() => {
           console.warn("Autoplay blocked until user interacts.");
         });
-      }, 600); // half-second delay after correct chime
+      }, 600);
     }
 
     // ✅ Add celebratory animation
@@ -158,9 +157,20 @@ function checkQuizCompletion(totalQuestions, moduleName) {
 
     // ✅ Mark module complete only if 100% correct
     markModuleComplete(moduleName);
+
+    // ✅ Show Home button
+    const homeBtn = document.getElementById("home-btn");
+    if (homeBtn) {
+      homeBtn.style.display = "inline-block";
+      homeBtn.addEventListener("click", () => {
+        window.location.href = "../index.html"; // go back to homepage
+      });
+    }
+
   } else {
     scoreBox.textContent = `You got ${correctCount}/${totalQuestions} correct. Keep going!`;
     quizSection.appendChild(scoreBox);
   }
-  
+}
+
 }

@@ -1,0 +1,58 @@
+[
+  {
+    "question": "What is the primary purpose of malware?",
+    "options": [
+      "To disrupt, damage, or gain unauthorized access to systems",
+      "To improve system performance",
+      "To install legitimate software updates",
+      "To provide free antivirus protection"
+    ],
+    "answer": 0,
+    "explanation": "Malware is malicious software designed to harm systems, steal data, or gain unauthorized access."
+  },
+  {
+    "question": "Which type of malware encrypts files and demands payment to restore access?",
+    "options": [
+      "Virus",
+      "Trojan",
+      "Ransomware",
+      "Spyware"
+    ],
+    "answer": 2,
+    "explanation": "Ransomware locks files and demands payment, as seen in attacks like WannaCry."
+  },
+  {
+    "question": "What distinguishes worms from viruses?",
+    "options": [
+      "Worms spread automatically across networks without user action",
+      "Viruses only infect hardware devices",
+      "Worms are always harmless",
+      "Viruses cannot attach to files"
+    ],
+    "answer": 0,
+    "explanation": "Worms self‑replicate and spread across networks, while viruses attach to files or programs."
+  },
+  {
+    "question": "Which malware disguises itself as legitimate software but performs malicious actions?",
+    "options": [
+      "Trojan",
+      "Adware",
+      "Rootkit",
+      "Spyware"
+    ],
+    "answer": 0,
+    "explanation": "Trojans appear legitimate but secretly carry out harmful activities, such as installing spyware."
+  },
+  {
+    "question": "What is a common defense strategy against malware?",
+    "options": [
+      "Keep operating systems and software updated",
+      "Disable antivirus tools",
+      "Download files from unknown sources",
+      "Ignore suspicious links and attachments"
+    ],
+    "answer": 0,
+    "explanation": "Regular updates and antivirus tools help protect against malware infections."
+  }
+]
+

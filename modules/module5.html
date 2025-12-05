@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 5: Malware Types 🐛</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="module5.css">  
+  <link rel="stylesheet" href="../quiz.css">
+</head>
+<body data-module="module5">
+
+  <header>
+    <nav>
+      <div class="nav-left">
+        <img src="../images/logo.png" alt="CyberSafeGuard Academy Logo">
+        <a href="../index.html" class="header-btn">Home</a>
+        <a href="../about.html" class="header-btn">About</a>
+      </div>
+      <div class="nav-right">
+
+      </div>
+    </nav>
+  </header>
+
+  <main class="lesson">
+
+    <!-- Page 1: Video -->
+    <section id="video-section" class="video-section section-card">
+      <div class="progress-indicator">
+        <span class="circle" data-step="1"></span>
+        <span class="circle" data-step="2"></span>
+        <span class="circle" data-step="3"></span>
+      </div>
+      <h2>Quick Video</h2>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="../videos/Module5.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button id="to-text" class="next-btn">Next <span class="arrow">→</span></button>
+      </div>
+    </section>
+
+
+ <!-- Page 2: Lesson -->
+  <section id="text-section" class="section-card" style="display:none;">
+  <div class="progress-indicator">
+    <span class="circle" data-step="1"></span>
+    <span class="circle" data-step="2"></span>
+    <span class="circle" data-step="3"></span>
+  </div>
+
+  <h1>Module 5: Malware Types 🐛</h1>
+  <p>Malware is short for malicious software. It’s designed to disrupt, damage, or gain unauthorized access to systems. Attackers use malware to steal data, extort money, or sabotage operations.</p>
+
+  <h2>Common Types of Malware</h2>
+  <ul>
+    <li><strong>Viruses:</strong> Attach themselves to files or programs and spread when those files are shared.<br>
+      <em>Example:</em> A virus hidden in a document that infects your system when opened.</li>
+    <li><strong>Worms:</strong> Self‑replicating programs that spread across networks without user action.<br>
+      <em>Example:</em> A worm exploiting a network vulnerability to infect multiple machines.</li>
+    <li><strong>Trojans:</strong> Disguised as legitimate software but secretly perform malicious actions.<br>
+      <em>Example:</em> A fake “free game” that installs spyware.</li>
+    <li><strong>Ransomware:</strong> Encrypts files and demands payment to restore access.<br>
+      <em>Example:</em> WannaCry ransomware locking hospital systems worldwide.</li>
+    <li><strong>Spyware:</strong> Secretly monitors user activity and steals information.<br>
+      <em>Example:</em> Keyloggers that capture passwords and keystrokes.</li>
+    <li><strong>Adware:</strong> Displays unwanted ads, sometimes bundled with spyware.<br>
+      <em>Example:</em> Pop‑ups that redirect users to malicious sites.</li>
+    <li><strong>Rootkits:</strong> Hide deep in the system to give attackers persistent, hidden access.<br>
+      <em>Example:</em> Rootkits that disable antivirus detection.</li>
+  </ul>
+
+  <h2>Defense Strategies</h2>
+  <ul>
+    <li>Keep operating systems and software updated.</li>
+    <li>Use antivirus and anti‑malware tools.</li>
+    <li>Avoid downloading files from untrusted sources.</li>
+    <li>Regularly back up important data.</li>
+    <li>Train users to recognize suspicious links and attachments.</li>
+  </ul>
+
+  <h2>Real‑World Examples</h2>
+  <ul>
+    <li><strong>Stuxnet Worm (2010):</strong> Targeted industrial control systems, showing how malware can be used for cyber warfare.</li>
+    <li><strong>CryptoLocker (2013):</strong> Early ransomware that encrypted files and demanded Bitcoin payments.</li>
+  </ul>
+
+  <h2>📌 Key Takeaways</h2>
+  <ul>
+    <li>Malware comes in many forms, each with unique methods of attack.</li>
+    <li>Understanding types of malware helps in recognizing and preventing them.</li>
+    <li>Strong defenses and awareness are critical to reducing risk.</li>
+  </ul>
+
+  <button id="to-quiz" class="next-btn">Next →</button>
+</section>
+
+
+ <!-- Page 3: Quiz -->
+    <section id="quiz-section" class="section-card" style="display:none;">
+      <div class="progress-indicator">
+        <span class="circle" data-step="1"></span>
+        <span class="circle" data-step="2"></span>
+        <span class="circle" data-step="3"></span>
+      </div>
+      <h2>Quiz</h2>
+      <div id="quiz-form"></div>
+
+      <!-- ✅ Sounds -->
+      <audio id="correct-sound" src="../sounds/Correct Sound.mp3" preload="auto"></audio>
+      <audio id="completion-sound" src="../sounds/celebration.mp3" preload="auto"></audio>
+
+      <button id="home-btn" class="home-btn" style="display:none;">Home</button>
+      
+    </section>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div> 
+
+    <!-- Navigation logic -->
+    <script src="../scripts/navigation.js"></script>
+
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+    <!-- Shared quiz logic -->
+    <script src="../scripts/quiz.js"></script>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CyberSafeGuard Academy</p>
+  </footer>
+
+</body>
+</html>
+

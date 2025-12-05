@@ -16,6 +16,98 @@
     "options": ["RSA", "ECC", "AES", "Diffie-Hellman"],
     "answer": 2,
     "explanation": "AES is a symmetric encryption algorithm used for bulk data encryption."
+  },
+   {
+    "question": "Which port does HTTPS use by default?",
+    "options": ["80", "21", "443", "22"],
+    "answer": 2,
+    "explanation": "HTTPS uses port 443 to provide secure web communication over SSL/TLS."
+  },
+  {
+    "question": "What is the primary purpose of a firewall?",
+    "options": [
+      "Encrypt data in transit",
+      "Filter and control network traffic",
+      "Detect malware on endpoints",
+      "Provide secure remote access"
+    ],
+    "answer": 1,
+    "explanation": "Firewalls monitor and filter traffic based on security rules to block unauthorized access."
+  },
+  {
+    "question": "Which type of malware disguises itself as legitimate software?",
+    "options": ["Worm", "Trojan", "Rootkit", "Adware"],
+    "answer": 1,
+    "explanation": "Trojans appear to be legitimate programs but perform malicious actions once installed."
+  },
+  {
+    "question": "Which authentication factor is represented by a fingerprint?",
+    "options": [
+      "Something you know",
+      "Something you have",
+      "Something you are",
+      "Somewhere you are"
+    ],
+    "answer": 2,
+    "explanation": "Biometric identifiers like fingerprints fall under 'something you are'."
+  },
+  {
+    "question": "What type of attack floods a server with traffic to make it unavailable?",
+    "options": [
+      "Phishing",
+      "Denial of Service (DoS)",
+      "SQL Injection",
+      "Privilege Escalation"
+    ],
+    "answer": 1,
+    "explanation": "DoS attacks overwhelm a system with traffic, preventing legitimate users from accessing services."
+  },
+  {
+    "question": "Which protocol is commonly used for secure remote administration?",
+    "options": ["Telnet", "SSH", "HTTP", "SNMP"],
+    "answer": 1,
+    "explanation": "SSH provides encrypted communication for secure remote administration."
+  },
+  {
+    "question": "What is the main purpose of a VPN?",
+    "options": [
+      "To block malware",
+      "To create a secure encrypted tunnel over public networks",
+      "To filter spam emails",
+      "To manage encryption keys"
+    ],
+    "answer": 1,
+    "explanation": "VPNs encrypt traffic and mask IP addresses, securing communication over untrusted networks."
+  },
+  {
+    "question": "Which security principle ensures that users only have the access they need?",
+    "options": [
+      "Defense in Depth",
+      "Least Privilege",
+      "Separation of Duties",
+      "Availability"
+    ],
+    "answer": 1,
+    "explanation": "Least Privilege restricts users to only the permissions necessary for their role."
+  },
+  {
+    "question": "Which hashing algorithm is commonly used to verify file integrity?",
+    "options": ["AES", "SHA-256", "RSA", "ECC"],
+    "answer": 1,
+    "explanation": "SHA-256 is a cryptographic hash function used to ensure data integrity."
+  },
+  {
+    "question": "What type of vulnerability allows attackers to inject malicious code into a database query?",
+    "options": [
+      "Cross-Site Scripting (XSS)",
+      "SQL Injection",
+      "Buffer Overflow",
+      "Privilege Escalation"
+    ],
+    "answer": 1,
+    "explanation": "SQL Injection exploits insecure queries to manipulate databases and extract sensitive data."
   }
+
+
 ]
 

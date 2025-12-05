@@ -24,6 +24,7 @@ function renderSecurityPlusQuiz(questions, container) {
   const nextBtn = document.createElement("button");
 
   nextBtn.textContent = "Next Question";
+  nextBtn.className = "quiz-btn";   // ✅ apply quiz-btn style
   nextBtn.style.display = "none";
 
   container.appendChild(questionEl);
@@ -34,6 +35,8 @@ function renderSecurityPlusQuiz(questions, container) {
 
   function loadQuestion() {
     const q = questions[current];
+    q.answered = false; // ✅ reset answered flag for each new question
+
     questionEl.textContent = q.question;
     optionsEl.innerHTML = "";
     feedbackEl.textContent = "";
@@ -43,21 +46,35 @@ function renderSecurityPlusQuiz(questions, container) {
       const btn = document.createElement("button");
       btn.textContent = opt;
       btn.className = "option-btn";
-      btn.onclick = () => checkAnswer(i);
+      btn.onclick = () => checkAnswer(i, btn);
       optionsEl.appendChild(btn);
     });
   }
 
-  function checkAnswer(selected) {
+  function checkAnswer(selected, clickedBtn) {
     const q = questions[current];
+
+    // ✅ Prevent double scoring
+    if (q.answered) {
+      return;
+    }
+
     if (selected === q.answer) {
       feedbackEl.textContent = "✅ Correct! " + q.explanation;
       score++;
     } else {
       feedbackEl.textContent = "❌ Incorrect. " + q.explanation;
     }
+
     scoreEl.textContent = `Score: ${score}/${current + 1}`;
     nextBtn.style.display = "block";
+
+    // ✅ Mark this question as answered
+    q.answered = true;
+
+    // ✅ Disable all option buttons after answering
+    const optionButtons = optionsEl.querySelectorAll(".option-btn");
+    optionButtons.forEach(btn => btn.disabled = true);
   }
 
   nextBtn.onclick = () => {

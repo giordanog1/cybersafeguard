@@ -555,3 +555,17 @@ footer {
   transform: translateX(4px);
 }
 
+.home-btn {
+  text-decoration: none;
+  padding: 8px 15px;
+  border: none;
+  border-bottom: 2px solid #0bdcd1;
+  color: #fff;
+  background: #01021a;
+  transition: background 0.3s, color 0.3s;
+}
+
+.home-btn:hover {
+  background: #0bdcd1;
+  color: #01021a;
+}
